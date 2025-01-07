@@ -1,0 +1,179 @@
+/*her impoterer jeg style.css filen*/
+@import "style.scss";
+/*Her kommer stylingen til productSpecs*/
+article.productSpec{
+    display: grid;
+    
+    margin: 10em auto;
+    max-width: 1170px;
+    grid-template-columns: repeat(2, 1fr);
+    height: 595px;
+    gap: 2em;
+    div.productSpec__imgDiv{
+        max-width: 570px;
+       
+        display: grid;
+        border-radius: 5px;
+        div.productSpec__background{
+            background-color: $product_background-color;
+            height: 565px;
+            border-radius: 5px;
+            display: grid;
+        border-radius: 5px;
+        }
+        img{
+            max-width: 370px;
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            place-self: center;
+        }
+        i.fa-arrow-right{
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            align-self: center;
+            justify-self: end;
+           margin-right: 10px;
+            color: #92D5F6;
+            font-size: 1.5em;
+        }
+        i.fa-arrow-left{
+            grid-column: 1/-1;
+            margin-left: 10px;
+            grid-row: 1/2;
+            align-self: center;
+            justify-self: start;
+           font-size: 1.5em;
+            color: #92D5F6;
+            display: block;
+        }
+
+        div.dotsDiv{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+            
+            div.dotsDiv__dot{
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+               border:2px solid #92D5F6;
+            }
+            div.dotsDiv__dot--chosen{
+                background-color: #92D5F6;
+            }
+        }
+    }
+    section{
+        max-width: 570px;
+        background-color: #F5F7F9;
+        border-radius: 30px;
+        box-shadow: 2rem 2rem 5.5rem rgba(82, 82, 82, 0.37);
+        padding-top: 55px;
+        height: 565px;
+        padding-left: 70px;
+        h1.productSpec__heading{
+            font-size: 3rem;
+            font-weight: 400;
+        }
+        p.productSpec__text{
+            margin-top: 1.5rem;
+            max-width: 430px;
+        }
+        img.productSpec__logo{
+            max-width: 70px;
+            margin-top: 1.5rem;
+            margin-left: 30px;
+        }
+        a.productSpec__addToCart{
+            text-decoration: none;
+        
+           
+           width: 169px;
+           box-shadow: 0.5rem 0.5rem 1.5rem rgba(82, 82, 82, 0.37);
+           height: 60px;
+           font-size: 1rem;
+          
+           display: block;
+           margin-left: 129px;
+           margin-top: 2rem;
+           background-image: $buttonGradient;
+           border-radius: 30px;
+           transition: 0.3s;
+           border: none;
+           display: grid;
+           font-family: $rubik;
+           color: black;
+           place-items: center;
+        }
+        a.productSpec__addToCart:hover{
+            box-shadow: 0.2rem 0.2rem 1rem rgba(82, 82, 82, 0.37);
+        }
+    }
+}
+
+
+article.stats{
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0 auto;
+    grid-template-rows: repeat 0.1fr 1fr;
+    padding-bottom: 10em;
+    
+    h2{
+        text-align: center;
+        font-size: 3rem;
+      color: #24282A;
+      font-weight: 400;
+      margin-bottom: 56px;
+      grid-column: 1/-1;
+      grid-row: 1/2;
+     
+    }
+    div.stats__divider{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 600px;
+        
+        
+    }
+    section.stat{
+        margin-bottom: 40px;
+       
+        h3.stat__h3{
+            margin-bottom: 17px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        p.stat__text{
+            color: #979797;
+            margin-bottom: 5px;
+            font-size: 1.25rem;
+        }
+        div.stat__box{
+            background-color: #F5F7F9;
+            max-width: 600px;
+            margin-bottom: 10px;
+          
+            p.statPercent{
+                width: 27%;
+                background-color: #F9C4D2;
+                padding-left: 0.3em;
+                color: white;
+            }
+            
+        }
+    }
+    div.add{
+        grid-row: 2/3;
+        display: grid;
+        place-items: center;
+        justify-items: end;
+        img{
+            max-width: 160px;
+        }
+    }
+   
+}

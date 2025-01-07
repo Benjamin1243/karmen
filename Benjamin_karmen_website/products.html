@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkter</title>
+    <script defer src="https://kit.fontawesome.com/c46cc5d0d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheets/products.css">
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="imgs/karmen-logo-sort.png" alt=""></a></li>
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                
+                <li><a class="more_info" href="more_info.html">Mere info</a>
+                         <div class="more_info_div">
+                            <div class="invisible"></div>
+                        <div class="more_info_div_item"><a href="">Kontakt</a></div>
+                        <div class="more_info_div_item"><a href="">Om os</a></div>
+                        <div class="more_info_div_item"><a href="">FAQ</a></div>
+                         </div>
+                    </li>
+             
+                <li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i>Kurv</a></li>
+                <li class="burgermenu"><i class="fa-solid fa-bars"></i> </li>
+            </ul>
+    
+        </nav>
+    </header>
+    <main>
+        <div class="grey_background">
+        <h1 class="all_products"> <span class="bold">Alle </span>produkter</h1>
+        <section class="products">
+         <article class="product">
+            <div class="product__img"><img src="imgs/products/staffeli_product.png" alt=""></div>
+            <div class="productText"><h3 class="productText__h3">Mini staffeli</h3>
+            <p class="productText__newPrice">30 kr</p>
+            <p class="productText__oldPrice">95 kr</p>
+            </div>
+            <a class="product__button" href="productSpec.html">Læs mere</a>
+         </article>
+         <article class="product">
+            <div class="product__img"><img src="imgs/products/sukkulent_product.png" alt=""></div>
+            <div class="productText"><h3 class="productText__h3">Sukkulent</h3>
+            <p class="productText__newPrice">50 kr</p>
+            <p class="productText__oldPrice">150 kr</p>
+            </div>
+            <a class="product__button" href="productSpec.html">Læs mere</a>
+         </article>  
+         <article class="product">
+            <div class="product__img"><img src="imgs/products/kurv_2.png" alt="kurv"></div>
+            <div class="productText"><h3 class="productText__h3">kurv</h3>
+            <p class="productText__onePriceOnly">80 kr</p>
+            
+            </div>
+            <a href="productSpec.html" class="product__button">Læs mere</a>
+         </article>
+         <article class="product">
+            <div class="product__img"><img src="imgs/products/ugle_2.png" alt="ugle"></div>
+            <div class="productText"><h3 class="productText__h3">Ugle</h3>
+            <p class="productText__onePriceOnly">50 kr</p>
+            
+            </div>
+            <a class="product__button" href="productSpec.html">Læs mere</a>
+         </article>       
+         <article class="product">
+            <div class="product__img"><img src="imgs/products/krokodille_2.png" alt="Krokodille"></div>
+            <div class="productText"><h3 class="productText__h3">Krokodille</h3>
+            <p class="productText__onePriceOnly">65 kr</p>
+            </div>
+            <a class="product__button" href="productSpec.html">Læs mere</a>
+         </article>   
+        </section>
+        
+    </div><!--grey_background end-->
+    <section class="inpiration">
+        <img class="inpiration__logo" src="imgs/instagramLogo.png" alt="instagram logo">
+        <h2 class="inpiration__h2" >Bliv inspireret af <br>
+            <span class="light_grey">Billeder fra vores Instagram</span></h2>
+            <div class="imageGallery">
+                <img src="imgs/gallery/gal1.png" alt="By i portugal">
+                <img src="imgs/gallery/gal2.png" alt="Bjerg i Nepal">
+                <img src="imgs/gallery/gal3.png" alt="Paddel boarding">
+                <img src="imgs/gallery/gal4.png" alt="By i Italien">
+                <img src="imgs/gallery/gal5.png" alt="Vej i argetina">
+                <img src="imgs/gallery/gal6.png" alt="En fotograf der tager billeder af en by">
+                <img src="imgs/gallery/gal7.png" alt="Bjerg">
+                <img src="imgs/gallery/gal8.png" alt="bjerg">
+                <img src="imgs/gallery/gal9.png" alt="Golden Gate brigde">
+                <img src="imgs/gallery/gal10.png" alt="båd i venedig">
+            </div>
+    </section>
+    <a class="a" href="#wrapper">
+        <div class="border">
+           <span>&nbsp;</span>
+        </div>
+     </a>  
+    </main>
+    <footer>
+        <div class="signUp">
+        <p class="signUp__p">Tilmeld dig vores nyhedsbrev</p>
+        <form class="signUp__form" action="thankSite.html">
+           <label for="mail"><i class="fa-solid fa-envelope"></i></label>
+            <input class="mail" id="mail" type="text" placeholder="Din Email">
+        <input class="submit" type="submit" value="Abonner">
+        </form>
+    </div>
+    <div class="footerList">
+        <ul  class="footerList_ul">
+            <li  class="footerList_li"><a href=""><img src="imgs/logoFooter.png" alt=""></a></li>
+            <li  class="footerList_li"><a  class="aktuelleSideFooter" href="index.html">Forside</a></li>
+            <li class="footerList_li"><a href="products.html">Produkter</a></li>
+            <li class="footerList_li"><a href="more_info.html">Mere info</a></li>
+            <li class="footerList_li"><a href="cart.html"><i class="fa-solid fa-cart-plus"></i>Kurv</a></li>
+        </ul>
+
+    </div>
+    </footer>
+</div><!--Wrapper end-->
+</body>
+</html>
