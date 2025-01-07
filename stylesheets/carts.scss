@@ -1,0 +1,239 @@
+@import "style.scss";
+
+/*Her kommer css koden til cart.html*/
+/*Her er koden til breadcrumb*/
+a{
+    color: #8093A7;
+    font-family: verdana;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration:none
+  }
+  section.breadcrumbs {
+    width: 80%;
+    margin: 4em auto 2em auto;
+    display: grid;
+    grid: 1fr / repeat(4, 1fr);
+    gap: 1%;
+  }
+  .pointer {
+    height: 80px;
+    position: relative;
+    background: #F3F5FA;
+    display: grid;
+    place-items: center;
+  }
+  .pointer:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+  }
+  #first:before {
+    border-left: none;
+  }
+  #first {
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+  }
+  
+  .pointer:after {
+    content: "";
+    position: absolute;
+    right: -29px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid #F3F5FA;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    z-index: 1
+  }
+  #last:after {
+    border-left: none;
+  }
+  #last {
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  .current, .pointer:hover {
+    background: #F9C4D2;
+    color: #fff;
+  }
+  .current:after, .pointer:hover:after  {
+    border-left: 30px solid #F9C4D2;
+  }
+
+  /*Her koden til de produkter der er indkøbsvognen*/
+section.cart{
+    padding-left: 3em;
+    margin-bottom: 20em;
+   margin-top: 77px;
+   padding-top: 154px;
+    background-color: $backgorund_grey;
+    padding-bottom: 200px;
+     
+    div.cart__div:last-of-type{
+        justify-content: end;
+    }
+
+
+    div.cart__div{
+        max-width: 1198px;
+        margin: 0 auto 3em auto;
+        display: flex;
+        justify-content: space-between;
+        .cart__h2{
+            font-size: 3em;
+            font-weight: 200;
+            color: #24282A;
+        }
+        .bold{
+           
+            font-weight: 700;
+            color: #000000;
+        }
+        .cart__a{
+           width: 169px;
+           border-radius: 30px;
+           height: 60px;
+           background-image: linear-gradient(#FFE9E9, #F9C4D2);
+           border: none;
+           font-size: 1rem;
+           font-weight: 400;
+           transition: 0.4s;
+           font-weight: 500;
+          color: #000000;
+
+           box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+           display: grid;
+           place-items: center;
+
+           
+        }
+        .cart__a:hover{
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /*Her kommer koden til produkterne*/
+        
+    }
+    .product{
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        grid-template-rows: repeat(1,1fr);
+        height: 185px;
+        transition: 0.5s;
+        max-width: 1198px;
+        background-color: #FFFFFF;
+        margin: 0 auto 3em auto;
+        column-gap: 4em;
+       
+
+    .product__addOrRemove{
+        display: flex;
+        div.addOrRemove_box:hover{
+            background-color: #F9C4D2;
+            color: #FFFFFF;
+        }
+        div.addOrRemove_box{
+            width: 57px;
+            transition: 0.3s;
+            height: 57px;
+            border: 3px solid #F9C4D2;
+            margin-right: -4px;
+            display: grid;
+            place-items: center;
+            border-radius: 5px;
+            align-self: center;
+            cursor: pointer;
+            p{
+                font-size: 1.125em;
+                font-weight: 800;
+            }
+           
+        }
+        
+        div.addOrRemove_box--value{
+            cursor: default;
+            width: 57px;
+            height: 57px;
+            border: 1px solid #F9C4D2;
+            background-color: #F9C4D2;
+            border-radius: 0px;
+            p{
+                color: white;
+            }
+        }
+    }
+        
+        .product__backgroundDiv{
+       
+           display: flex;
+           grid-column: 1/4;
+           transition: 0.5s;
+           place-content: center;
+           background-color: $product_background-color;
+           border-radius: 5px;
+           margin-left: -4em;
+           max-width: 281px;
+           height: 165px;
+           align-self: center;
+          
+           .product__img{
+            
+            width: 107px;
+            height: 134px;
+            place-self: center;
+           }
+        }
+
+        .product__textContainer:last-of-type{
+            display: grid;
+            justify-content: stretch;
+            grid-column: 6/8;
+            p{
+                margin-left: 10px;
+                grid-column: 1/2;
+                width: 100%;
+                grid-row: 1/2;
+            }
+        }
+        .product__textContainer{
+            display: flex;
+            flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
+          p{ color: $grey_text;}
+          p.product__p--bold{ 
+            color: black;
+            font-weight: 600;
+            font-size: 1.125em;
+            grid-row: 1/-1;
+        
+        }
+        
+        i.fa-x{
+            justify-self: end;
+            align-self: start;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            margin-top: 20px;
+            font-size: 0.8em;
+            margin-right: 20px;
+        }
+
+        }
+    }
+    /*Her er hover effekten på produkternes baggrunds box*/
+   
+     
+    
+}
+

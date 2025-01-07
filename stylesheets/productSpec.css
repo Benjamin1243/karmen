@@ -1,0 +1,476 @@
+@charset "UTF-8";
+/*her impoterer jeg style.css filen*/
+/*Her laver jeg alle varibler, og impoterer fonts og styles*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/*variabler*/
+/*Her er nogle defualt regler*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Her kommer css koden til "til toppen" knappen */
+.border {
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(200.82deg, #FFE9E9 27.89%, #F9C4D2 83.86%) !important;
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.border:hover {
+  transform: scale(1.35);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.border span {
+  position: absolute;
+  top: 43%;
+  left: 35%;
+  height: 30%;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid;
+  border-color: #000;
+  border-width: 3px 0 0 3px;
+  transform: rotate(45deg);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/*HEr laver jeg en css class som bruges til vores input, hvor at hvis brugeren taster noget forkert i input skal fejlbekseden opstå i placeholder, hvor placeholderen skifter farve til rød*/
+button:hover {
+  box-shadow: 1rem 1rem 0.5rem rgba(82, 82, 82, 0.37);
+}
+
+/*Her laver jeg en class til alle de ting der skal være bold*/
+.bold {
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/*Her kommer lige en regel til alle texterne, så de for den samme font-size*/
+p, h1, h2, h3, button {
+  font-family: "Rubik", sans-serif;
+}
+
+#wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/*Nu kommer koden til headeren*/
+header nav {
+  background-color: #FFE9E9;
+}
+
+header nav ul {
+  background-color: #FFE9E9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 59px;
+  /*Her laver jeg hover effekten til dropdown menuen */
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li div.more_info_div {
+  flex-direction: column;
+  max-width: 120px;
+  margin-left: -1.2em;
+  display: none;
+}
+header nav ul li div.more_info_div div.invisible {
+  height: 1em;
+  opacity: 0;
+}
+header nav ul li:first-of-type {
+  margin-right: 200px;
+}
+header nav ul li:last-of-type {
+  display: none;
+}
+header nav ul li:hover div.more_info_div {
+  z-index: 10;
+  display: flex;
+  position: absolute;
+}
+header nav ul li:hover div.more_info_div div {
+  background-color: #F9C4D2;
+  width: 120px;
+}
+header nav ul li:hover div.more_info_div div:hover {
+  background-color: #FFE9E9;
+}
+header nav ul li:hover div.more_info_div div a {
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+header nav ul li:hover div.more_info_div div.more_info_div_item {
+  padding: 29px 15px;
+}
+header nav ul li a {
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/*Her laver jeg stylingen til footeren */
+footer {
+  margin-top: 10em;
+  padding-bottom: 100px;
+  background-color: #F5F7F9;
+  /*Her kommer koden til listen i footeren, med de forskeillige menu punkter*/
+}
+footer div.signUp {
+  margin: 0 auto;
+  position: relative;
+  top: -11em;
+  max-width: 770px;
+}
+footer div.signUp p.signUp__p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4em;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+footer div.signUp form.signUp__form {
+  width: 100%;
+  box-shadow: 1rem 1rem 1.5rem rgba(82, 82, 82, 0.37);
+  background-color: white;
+  height: 100px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1em;
+  /*DEtte er knappen*/
+}
+footer div.signUp form.signUp__form input.mail {
+  justify-self: stretch;
+  flex-grow: 1;
+  padding-left: 1em;
+  font-family: "Rubik", sans-serif;
+  border: none;
+}
+footer div.signUp form.signUp__form input.mail:focus {
+  outline: none;
+}
+footer div.signUp form.signUp__form label {
+  width: 2em;
+  padding-left: 2em;
+  text-align: center;
+  color: #92D5F6;
+}
+footer div.signUp form.signUp__form input.submit {
+  transition: 0.5s;
+  width: 200px;
+  background-image: linear-gradient(#FFE9E9, #F9C4D2);
+  height: 80px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.125em;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  margin-left: auto;
+  margin-right: 1em;
+}
+footer div.signUp form.signUp__form input.submit:hover {
+  height: 100px;
+  width: 220px;
+  margin-right: 0em;
+}
+footer div.footerList {
+  margin-top: -2em;
+}
+footer div.footerList .footerList_ul {
+  display: flex;
+  margin-left: 61px;
+  max-width: 920px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer div.footerList .footerList_ul .footerList_li {
+  list-style: none;
+  /*Den nedstående linje kode, er til det link til den side man er på*/
+}
+footer div.footerList .footerList_ul .footerList_li a {
+  place-items: center;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  color: #92D5F6;
+}
+footer div.footerList .footerList_ul .footerList_li a.aktuelleSideFooter {
+  background-color: #F9C4D2;
+  width: 120px;
+  display: grid;
+  height: 65px;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1.5rem rgba(82, 82, 82, 0.37);
+}
+footer div.footerList .footerList_ul .footerList_li img {
+  max-width: 240px;
+  height: 110px;
+  margin-right: 152px;
+}
+
+@media only screen and (max-width: 768px) {
+  #wrapper {
+    max-width: 768px;
+  }
+  header nav ul {
+    gap: 40px;
+  }
+  header nav ul li:first-of-type {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 361px) {
+  #wrapper {
+    max-width: 360px;
+  }
+  header nav ul {
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+  }
+  header nav ul li {
+    display: none;
+  }
+  header nav ul li:first-of-type {
+    display: block;
+    margin: 0;
+  }
+  header nav ul li:first-of-type img {
+    max-width: 122px;
+    max-height: 55px;
+  }
+  header nav ul li:last-of-type {
+    display: block;
+  }
+  header nav ul.invisible {
+    height: 100%;
+    width: 100%;
+    gap: 2em;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 10em;
+  }
+  header nav ul.invisible li {
+    display: block;
+  }
+  header nav ul.invisible li:last-of-type {
+    position: absolute;
+    top: 2em;
+  }
+  /*Nu kommer koden  til footeren*/
+  footer div.signUp {
+    top: -5rem;
+  }
+  footer div.signUp form.signUp__form {
+    width: 265px;
+    height: 51px;
+    margin: 0 auto;
+  }
+  footer div.signUp form.signUp__form input#mail {
+    max-width: 100px;
+  }
+  footer div.signUp form.signUp__form input.submit {
+    width: 70px;
+    font-size: 0.625rem;
+    height: 40px;
+  }
+  footer div.footerList {
+    margin-top: -2em;
+  }
+  footer div.footerList .footerList_ul {
+    display: flex;
+    max-width: 360px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer div.footerList .footerList_ul .footerList_li {
+    display: none;
+  }
+}
+/*Her kommer stylingen til productSpecs*/
+article.productSpec {
+  display: grid;
+  margin: 10em auto;
+  max-width: 1170px;
+  grid-template-columns: repeat(2, 1fr);
+  height: 595px;
+  gap: 2em;
+}
+article.productSpec div.productSpec__imgDiv {
+  max-width: 570px;
+  display: grid;
+  border-radius: 5px;
+}
+article.productSpec div.productSpec__imgDiv div.productSpec__background {
+  background-color: #FFE9E9;
+  height: 565px;
+  border-radius: 5px;
+  display: grid;
+  border-radius: 5px;
+}
+article.productSpec div.productSpec__imgDiv img {
+  max-width: 370px;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  place-self: center;
+}
+article.productSpec div.productSpec__imgDiv i.fa-arrow-right {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: end;
+  margin-right: 10px;
+  color: #92D5F6;
+  font-size: 1.5em;
+}
+article.productSpec div.productSpec__imgDiv i.fa-arrow-left {
+  grid-column: 1/-1;
+  margin-left: 10px;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: start;
+  font-size: 1.5em;
+  color: #92D5F6;
+  display: block;
+}
+article.productSpec div.productSpec__imgDiv div.dotsDiv {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+article.productSpec div.productSpec__imgDiv div.dotsDiv div.dotsDiv__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 2px solid #92D5F6;
+}
+article.productSpec div.productSpec__imgDiv div.dotsDiv div.dotsDiv__dot--chosen {
+  background-color: #92D5F6;
+}
+article.productSpec section {
+  max-width: 570px;
+  background-color: #F5F7F9;
+  border-radius: 30px;
+  box-shadow: 2rem 2rem 5.5rem rgba(82, 82, 82, 0.37);
+  padding-top: 55px;
+  height: 565px;
+  padding-left: 70px;
+}
+article.productSpec section h1.productSpec__heading {
+  font-size: 3rem;
+  font-weight: 400;
+}
+article.productSpec section p.productSpec__text {
+  margin-top: 1.5rem;
+  max-width: 430px;
+}
+article.productSpec section img.productSpec__logo {
+  max-width: 70px;
+  margin-top: 1.5rem;
+  margin-left: 30px;
+}
+article.productSpec section a.productSpec__addToCart {
+  text-decoration: none;
+  width: 169px;
+  box-shadow: 0.5rem 0.5rem 1.5rem rgba(82, 82, 82, 0.37);
+  height: 60px;
+  font-size: 1rem;
+  display: block;
+  margin-left: 129px;
+  margin-top: 2rem;
+  background-image: linear-gradient(#FFE9E9, #F9C4D2);
+  border-radius: 30px;
+  transition: 0.3s;
+  border: none;
+  display: grid;
+  font-family: "Rubik", sans-serif;
+  color: black;
+  place-items: center;
+}
+article.productSpec section a.productSpec__addToCart:hover {
+  box-shadow: 0.2rem 0.2rem 1rem rgba(82, 82, 82, 0.37);
+}
+
+article.stats {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  grid-template-rows: repeat 0.1fr 1fr;
+  padding-bottom: 10em;
+}
+article.stats h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #24282A;
+  font-weight: 400;
+  margin-bottom: 56px;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+article.stats div.stats__divider {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 600px;
+}
+article.stats section.stat {
+  margin-bottom: 40px;
+}
+article.stats section.stat h3.stat__h3 {
+  margin-bottom: 17px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+article.stats section.stat p.stat__text {
+  color: #979797;
+  margin-bottom: 5px;
+  font-size: 1.25rem;
+}
+article.stats section.stat div.stat__box {
+  background-color: #F5F7F9;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+article.stats section.stat div.stat__box p.statPercent {
+  width: 27%;
+  background-color: #F9C4D2;
+  padding-left: 0.3em;
+  color: white;
+}
+article.stats div.add {
+  grid-row: 2/3;
+  display: grid;
+  place-items: center;
+  justify-items: end;
+}
+article.stats div.add img {
+  max-width: 160px;
+}/*# sourceMappingURL=productSpec.css.map */
